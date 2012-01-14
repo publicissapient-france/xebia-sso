@@ -8,9 +8,29 @@
   </parent>
   <artifactId>xebia-sso-webapp2</artifactId>
   <packaging>war</packaging>
-  <name> Xebia SSO ${project.artifactId} ${project.packaging}</name>
+  <name>[Xebia SSO] ${project.artifactId} ${project.packaging}</name>
   <url>http://blog.xebia.fr/</url>
   <build>
     <finalName>${project.artifactId}</finalName>
   </build>
+  <dependencies>
+    <!-- compile -->
+    <dependency>
+      <groupId>com.atlassian.crowd</groupId>
+      <artifactId>crowd-integration-client-rest</artifactId>
+      <version>${crowd-integration-client-rest.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring-web.version}</version>
+    </dependency>
+    <!-- provided -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>${servlet-api.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>

@@ -5,11 +5,12 @@
   <artifactId>xebia-sso</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>xebia-sso Maven Project :: ${project.artifactId} ${project.packaging} </name>
+  <name>[Xebia SSO Reactor] ${project.artifactId} ${project.packaging} </name>
   <url>http://blog.xebia.fr/</url>
   <modules>
     <module>xebia-sso-webapp1</module>
     <module>xebia-sso-webapp2</module>
+    <module>xebia-sso-openid</module>
   </modules>
   <properties>
     <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
@@ -35,18 +36,8 @@
     </plugins>
   </build>
   <dependencies>
-    <!-- compile -->
     <dependency>
-      <groupId>com.atlassian.crowd</groupId>
-      <artifactId>crowd-integration-client-rest</artifactId>
-      <version>${crowd-integration-client-rest.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-web</artifactId>
-      <version>${spring-web.version}</version>
-    </dependency>
-    <dependency>
+      <!-- compile -->
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j-api.version}</version>
@@ -57,13 +48,6 @@
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j-log4j12.version}</version>
       <scope>runtime</scope>
-    </dependency>
-    <!-- provided -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>${servlet-api.version}</version>
-      <scope>provided</scope>
     </dependency>
     <!-- test -->
     <dependency>
