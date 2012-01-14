@@ -7,7 +7,6 @@ function buildOpenIdUri() {
 	//openIdUri=http://sso.aws.xebiatechevent.info:8095/openidserver/users/
     var openIdUri="http://localhost:8095/openidserver/users/"+document.getElementById("openid_identifier").value;
     document.getElementById("openid_identifier").value=openIdUri;
-	alert("toto");
 	document.forms["openid_form"].submit();
 }
 </script>
