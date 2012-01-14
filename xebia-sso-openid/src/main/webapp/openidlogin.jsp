@@ -4,7 +4,7 @@
 <script language="Javascript"> 
 function buildOpenIdUri() {
 	// Use this URI to connect to the cloud instance
-	//openIdUri=http://sso.aws.xebiatechevent.info:8095/openidserver/users/ielfatmi
+	//openIdUri=http://sso.aws.xebiatechevent.info:8095/openidserver/users/
     var openIdUri="http://localhost:8095/openidserver/users/"+document.getElementById("openid_identifier").value;
     document.getElementById("openid_identifier").value=openIdUri;
 	alert("toto");
